@@ -1,0 +1,56 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<build>
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause>
+            <userId>minhhoang</userId>
+          </hudson.model.Cause_-UserIdCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <com.cloudbees.plugins.credentials.builds.CredentialsParameterBinder plugin="credentials@1074.v60e6c29b_b_44b_">
+      <boundCredentials class="concurrent-hash-map"/>
+    </com.cloudbees.plugins.credentials.builds.CredentialsParameterBinder>
+    <com.checkmarx.jenkins.CxScanResult plugin="checkmarx@2022.1.2">
+      <owner class="build" reference="../../.."/>
+      <projectId>0</projectId>
+      <scanRanAsynchronous>false</scanRanAsynchronous>
+      <serverUrl></serverUrl>
+      <scanId>0</scanId>
+      <sastEnabled>false</sastEnabled>
+      <osaEnabled>false</osaEnabled>
+      <thresholdsEnabled>false</thresholdsEnabled>
+      <osaThresholdsEnabled>false</osaThresholdsEnabled>
+      <isThresholdForNewResultExceeded>false</isThresholdForNewResultExceeded>
+      <osaSuccessful>false</osaSuccessful>
+      <highCount>0</highCount>
+      <mediumCount>0</mediumCount>
+      <lowCount>0</lowCount>
+      <infoCount>0</infoCount>
+      <resultDeepLink></resultDeepLink>
+      <resultIsValid>false</resultIsValid>
+      <osaHighCount>0</osaHighCount>
+      <osaMediumCount>0</osaMediumCount>
+      <osaLowCount>0</osaLowCount>
+      <osaVulnerableAndOutdatedLibs>0</osaVulnerableAndOutdatedLibs>
+      <osaNoVulnerabilityLibs>0</osaNoVulnerabilityLibs>
+    </com.checkmarx.jenkins.CxScanResult>
+  </actions>
+  <queueId>16</queueId>
+  <timestamp>1646102909171</timestamp>
+  <startTime>1646102909173</startTime>
+  <result>FAILURE</result>
+  <duration>5943</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>/var/lib/jenkins/workspace/SCA_Check</workspace>
+  <hudsonVersion>2.319.3</hudsonVersion>
+  <scm class="hudson.scm.NullChangeLogParser"/>
+  <culprits class="java.util.Collections$UnmodifiableSet">
+    <c class="sorted-set"/>
+  </culprits>
+</build>

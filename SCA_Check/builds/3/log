@@ -1,0 +1,27 @@
+Started by user [8mha:////4A3WNXqCAIvmCXG1mrYWUl+pvhOxS3cqGpMrKTmfJUeNAAAAmh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgZ+/dLi1CL93My8jIx8oEEAaKUq6sQAAAA=[0mminhhoang
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/SCA_Check
+[Cx-Info]: Hide debug logs: false
+[Cx-Info]:   ORIGIN FROM JENKIN :: Jenkins localhost SCA Check
+[Cx-Info]:   ORIGIN URL FROM JENKIN :: http://localhost:8888/job/SCA_Check
+[Cx-Info]: Using job-specific dependency scan configuration.
+ERROR: Build step failed with exception
+com.cx.restclient.exception.CxClientException: SCA Resolver path does not exist. Path=/home/ubuntu/Downloads/ScaResolver-linux64/ScaResolver/ScaResolver
+	at com.checkmarx.jenkins.CxScanBuilder.scaResolverPathExist(CxScanBuilder.java:1944)
+	at com.checkmarx.jenkins.CxScanBuilder.getScaConfig(CxScanBuilder.java:1551)
+	at com.checkmarx.jenkins.CxScanBuilder.configureDependencyScan(CxScanBuilder.java:1523)
+	at com.checkmarx.jenkins.CxScanBuilder.resolveConfiguration(CxScanBuilder.java:1407)
+	at com.checkmarx.jenkins.CxScanBuilder.perform(CxScanBuilder.java:880)
+	at jenkins.tasks.SimpleBuildStep.perform(SimpleBuildStep.java:123)
+	at hudson.tasks.BuildStepCompatibilityLayer.perform(BuildStepCompatibilityLayer.java:78)
+	at hudson.tasks.BuildStepMonitor$1.perform(BuildStepMonitor.java:20)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.perform(AbstractBuild.java:806)
+	at hudson.model.Build$BuildExecution.build(Build.java:198)
+	at hudson.model.Build$BuildExecution.doRun(Build.java:163)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.run(AbstractBuild.java:514)
+	at hudson.model.Run.execute(Run.java:1888)
+	at hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:43)
+	at hudson.model.ResourceController.execute(ResourceController.java:99)
+	at hudson.model.Executor.run(Executor.java:432)
+Build step 'Execute Checkmarx Scan' marked build as failure
+Finished: FAILURE

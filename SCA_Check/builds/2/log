@@ -1,0 +1,82 @@
+Started by user [8mha:////4A3WNXqCAIvmCXG1mrYWUl+pvhOxS3cqGpMrKTmfJUeNAAAAmh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgZ+/dLi1CL93My8jIx8oEEAaKUq6sQAAAA=[0mminhhoang
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/SCA_Check
+[Cx-Info]: Hide debug logs: false
+[Cx-Info]:   ORIGIN FROM JENKIN :: Jenkins localhost SCA Check
+[Cx-Info]:   ORIGIN URL FROM JENKIN :: http://localhost:8888/job/SCA_Check
+[Cx-Info]: Using job-specific dependency scan configuration.
+[Cx-Warning]: couldn't load config file
+[Cx-Info]: ---------------------------------------Configurations:------------------------------------
+[Cx-Info]: plugin version: 2022.1.2
+[Cx-Info]: server url: http://192.168.1.10
+[Cx-Info]: username: 
+[Cx-Info]: is using Jenkins server proxy: true
+[Cx-Info]: project name: jvl_jenkins
+[Cx-Info]: team id: null
+[Cx-Info]: is synchronous mode: true
+[Cx-Info]: deny new project creation: false
+[Cx-Info]: SAST scan enabled: false
+[Cx-Info]: avoid duplicated projects scans: false
+[Cx-Info]: enable Project Policy Enforcement: false
+[Cx-Info]: continue build when timed out: false
+[Cx-Info]: post scan action: null
+[Cx-Info]: is force scan: false
+[Cx-Info]: scan level custom fields: 
+[Cx-Info]: Dependency scanner type: CxAST-SCA
+[Cx-Info]: Dependency scan configuration:
+[Cx-Info]:   folder exclusions: Checkmarx
+[Cx-Info]:   filter patterns: 
+[Cx-Info]:   thresholds enabled: false
+[Cx-Info]: ------------------------------------------------------------------------------------------
+[Cx-Debug]: Creating HTTP client.
+[Cx-Debug]: Adding a custom header: Account-Name: CxSCA_Partners
+[Cx-Info]: Initializing Cx client [2021.4.9]
+[Cx-Debug]: Initializing CxAST-SCA client.
+[Cx-Info]: Logging into CxAST-SCA
+[Cx-Info]: ----------------------------------- Initiating CxAST-SCA Scan:------------------------------------
+[Cx-Info]: Getting project by name: 'jvl_jenkins'
+[Cx-Info]: Getting project ID by name: 'jvl_jenkins'
+[Cx-Info]: Project not found
+[Cx-Info]: Project not found, creating a new one.
+[Cx-Info]: Created a project with ID 3f3a0908-e537-4215-ae51-f17b6cc288cc
+[Cx-Info]: Resolving configuration for project: 3f3a0908-e537-4215-ae51-f17b6cc288cc
+[Cx-Info]: Got the following manifest patterns [**/package.json, **/package-lock.json, **/lerna.json, **/.npmrc, **/*.gradle, **/gradle-wrapper.properties, **/build.gradle.kts, **/*.csproj, **/nuget.config, **/packages.config, **/pom.xml, **/settings.xml, **/build.sbt, **/requirements.txt, **/requirements-*.txt, **/requirement.txt, **/requirement-*.txt, **/*.whl, **/*.tar.gz, **/*.zip, **/packages.txt, **/yarn.lock, **/.yarnrc, **/composer.json, **/composer.lock, **/bower.json, **/.bowerrc, **/build.properties, **/plugins.sbt, **/gradle.properties, **/gradlew, **/gradlew.bat, **/gradle-wrapper.jar, **/versions.properties, **/VERSION, **/Dockerfile**, **/Package.swift, **/Cartfile, **/Cartfile.private, **/Cartfile.resolved, **/Podfile, **/Podfile.lock, **/go.mod, **/go.sum]
+[Cx-Info]: Got the following fingerprint patterns [!**/node_modules/**, !**/bower_components/**]
+[Cx-Info]: Executing SCA Resolver flow.
+[Cx-Info]: Path to Sca Resolver: /home/ubuntu/Downloads/ScaResolver-linux64
+[Cx-Info]: Sca Resolver Additional Parameters: -n jvl_jenkins -s /var/lib/jenkins/workspace/SAST_Check --report-extension Pdf --report-type Risk -r /home/ubuntu/Downloads
+[Cx-Info]: Path to the evidence file/home/ubuntu/Downloads/.cxsca-results.json
+[Cx-Error]: Error occurred while initiating scan.
+com.cx.restclient.exception.CxClientException: Error while running sca resolver executable. Exit code:5
+	at com.cx.restclient.ast.AstScaClient.submitScaResolverEvidenceFile(AstScaClient.java:352)
+	at com.cx.restclient.ast.AstScaClient.initiateScan(AstScaClient.java:288)
+	at com.cx.restclient.CxClientDelegator.lambda$initiateScan$1(CxClientDelegator.java:87)
+	at java.base/java.util.Map.forEach(Map.java:661)
+	at com.cx.restclient.CxClientDelegator.initiateScan(CxClientDelegator.java:85)
+	at com.checkmarx.jenkins.CxScanCallable.invoke(CxScanCallable.java:141)
+	at com.checkmarx.jenkins.CxScanCallable.invoke(CxScanCallable.java:28)
+	at hudson.FilePath.act(FilePath.java:1171)
+	at hudson.FilePath.act(FilePath.java:1154)
+	at com.checkmarx.jenkins.CxScanBuilder.perform(CxScanBuilder.java:912)
+	at jenkins.tasks.SimpleBuildStep.perform(SimpleBuildStep.java:123)
+	at hudson.tasks.BuildStepCompatibilityLayer.perform(BuildStepCompatibilityLayer.java:78)
+	at hudson.tasks.BuildStepMonitor$1.perform(BuildStepMonitor.java:20)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.perform(AbstractBuild.java:806)
+	at hudson.model.Build$BuildExecution.build(Build.java:198)
+	at hudson.model.Build$BuildExecution.doRun(Build.java:163)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.run(AbstractBuild.java:514)
+	at hudson.model.Run.execute(Run.java:1888)
+	at hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:43)
+	at hudson.model.ResourceController.execute(ResourceController.java:99)
+	at hudson.model.Executor.run(Executor.java:432)
+[Cx-Error]: ********************************************
+[Cx-Error]:  The Build Failed for the Following Reasons: 
+[Cx-Error]: ********************************************
+[Cx-Error]: Error creating scan.
+[Cx-Error]: 
+[Cx-Error]: -----------------------------------------------------------------------------------------
+
+[Cx-Error]: 
+[Cx-Error]: Failed to generate HTML report. SCA results are empty.
+Build step 'Execute Checkmarx Scan' changed build result to FAILURE
+Finished: FAILURE
