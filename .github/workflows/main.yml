@@ -1,0 +1,24 @@
+name: Checkmarx AST Scan
+on:
+  push:
+    branches:
+      - main
+      - master
+      - dev
+      - Feat/Checkmarx
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Checkmarx AST CLI Action
+        uses: checkmarxDev/ast-github-action@2.0.4 #Github Action version
+        with:
+          project_name: KH_SCA_Test
+          cx_tenant: dp_wp_account
+          base_uri: https://eu.ast.checkmarx.net 
+          cx_client_id: ${{ secrets.CLIENT_ID }}
+          cx_client_secret: ${{ secrets.SECRET }}
+          branch: master
+          additional_params: --debug --scan-types SCA
